@@ -1,0 +1,78 @@
+<!-- esto es un comentario -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> <!-- Para poner todo tipo de asentos-->
+	<title>Mi primera aplicación móvil</title>
+	<!-- Importacion de librerias -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css"> <!-- librerias css -->
+	<link rel="stylesheet" type="text/css" href="css/mystilo.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(document).ready(function (){
+			$("#btnSumar").click(function(){
+
+				var n1=parseInt($("#num1").val());
+				var n2=parseInt($("#num2").val());
+				var suma=n1+n2;
+				alert("EL RESULTADO ES: "+suma);
+				});
+			
+			//alert("hola mundo");
+		});
+	</script>
+
+</head>
+<body>
+	<div data-role ="page" id="Principal">
+		<div data-role="header">
+			<p ALIGN=center>PRINCIPAL</p>
+		</div>
+		<div data-role="content">
+			<p ALIGN=left>Contenido de la aplicación</p>
+			<a href="#Contacto" data-role="button" data-transition="slide">Contacto slide</a> <!-- # se utiliza para hacer referencia segido del ID de tipo buton-->
+			<a href="#Contacto" data-role="button" data-transition="slideup">Contacto up</a>
+			<a href="#Contacto" data-role="button" data-transition="slidedown">Contacto down</a>
+			<a href="#Contacto" data-role="button" data-transition="pop">Contacto pop</a>
+			<a href="#Contacto" data-role="button" data-transition="flip">Contacto flip</a>
+			<a href="#Contacto" data-role="button" data-transition="flow">Contacto flow</a>
+			<a href="#Contacto" data-role="button" data-transition="slidefade">Contacto slidefade</a>
+			<a href="#Contacto" data-role="button" data-transition="turn">Contacto turn</a>
+			<a href="#Suma" data-role="button" data-transition="turn">Sumar</a>
+		</div>
+		<div data-role ="footer">
+			<p ALIGN=right>Pie de la palicación</p>
+		</div>
+	</div>
+	<div data-role ="page" id="Contacto">
+		<div data-role="header">
+			<p >CONTACTO</p>
+		</div>
+		<div data-role="content">
+			<p>César Silva Hernández</p>
+			<p>DiMariacl.19@gmail.com</p>
+		</div>
+		<div data-role ="footer">
+			<p >Pie de la palicación</p>
+		</div>
+	</div>
+
+	<div data-role ="page" id="Suma">
+		<div data-role="header">
+			<p >Operación suma</p>
+		</div>
+		<div data-role="content">
+			<input type="text" id ="num1" placeholder="Escriba un número">
+			<input type="text" id ="num2" placeholder="Escriba un número">
+			<input type="button" id="btnSumar" value="Calcular suma">
+		</div>
+		<div data-role ="footer">
+			<p >Pie de la palicación</p>
+		</div>
+	</div>
+
+</body>
+</html>
